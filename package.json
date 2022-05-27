@@ -1,0 +1,56 @@
+{
+    "name": "n8n-nodes-changes",
+    "version": "0.1.0",
+    "description": "n8n node to process differences between two inputs",
+    "license": "MIT",
+    "homepage": "https://github.com/drudge/n8n-nodes-changes",
+    "author": {
+        "name": "Nicholas Penree",
+        "email": "nick@penree.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/drudge/n8n-nodes-changes.git"
+    },
+    "main": "index.js",
+    "scripts": {
+        "dev": "npm run watch",
+        "build": "tsc && gulp",
+        "lint": "tslint -p tsconfig.json -c tslint.json",
+        "lintfix": "tslint --fix -p tsconfig.json -c tslint.json",
+        "nodelinter": "nodelinter",
+        "watch": "tsc --watch"
+    },
+    "files": [
+        "dist"
+    ],
+    "keywords": [
+        "n8n",
+        "node",
+        "changes",
+        "diff",
+        "compare",
+        "n8n-node"
+    ],
+    "n8n": {
+        "nodes": [
+            "dist/nodes/Changes/Changes.node.js"
+        ]
+    },
+    "devDependencies": {
+        "@types/lodash.set": "^4.3.7",
+        "@types/node": "^14.17.27",
+        "@types/request-promise-native": "^1.0.18",
+        "gulp": "^4.0.0",
+        "n8n": "^0.178.2",
+        "n8n-workflow": "~0.100.0",
+        "nodelinter": "^0.1.9",
+        "tslint": "^6.1.2",
+        "typescript": "~4.7.2"
+    },
+    "dependencies": {
+        "deep-diff-pizza": "^1.0.1",
+        "lodash.set": "^4.3.2",
+        "n8n-core": "~0.118.0"
+    }
+}
