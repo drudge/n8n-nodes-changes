@@ -1,0 +1,21 @@
+{
+	"node": "n8n-nodes-changes.changes",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": [
+		"Development",
+		"Data & Storage"
+	],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://github.com/drudge/n8n-nodes-changes"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://github.com/drudge/n8n-nodes-changes"
+			}
+		]
+	}
+}
