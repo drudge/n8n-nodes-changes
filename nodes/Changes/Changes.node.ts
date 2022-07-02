@@ -16,7 +16,8 @@ function groupChange(changeset: any, change: any) {
 	if (!changeset[change.operation]) {
 		changeset[change.operation] = {};
 	}
-	set(changeset[change.operation], change.path, change.is);
+	const changeValue = change.operation === 'REMOVED' ? change.was : change.is;
+	set(changeset[change.operation], change.path, changeValue);
 	return changeset;
 }
 
@@ -53,7 +54,7 @@ export class Changes implements INodeType {
 			const item1 = input1[itemIndex];
 			const item2 = itemIndex < input2.length ? input2[itemIndex] : {};
 			const diff =  deepDiff(item1, item2).reduce(groupChange, {});
-			const changeSet: [string, any][] = Object.entries(diff);
+			const changeSet: Array<[string, any]> = Object.entries(diff);
 
 			for (const [operation, changes] of changeSet) {
 				const outputIndex = OPERATIONS.indexOf(operation);
