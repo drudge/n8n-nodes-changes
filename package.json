@@ -1,6 +1,6 @@
 {
     "name": "n8n-nodes-changes",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "n8n node to process differences between two inputs",
     "license": "MIT",
     "homepage": "https://github.com/drudge/n8n-nodes-changes",
@@ -30,7 +30,8 @@
         "changes",
         "diff",
         "compare",
-        "n8n-node"
+        "n8n-node",
+        "n8n-community-node-package"
     ],
     "n8n": {
         "nodes": [
